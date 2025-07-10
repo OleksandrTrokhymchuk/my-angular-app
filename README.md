@@ -1,3 +1,8 @@
+Single Angular Application in which you have an opportunity to find a random user and information about them. Below you see the weather in the user's location.
+
+To run the project use "cd my-angular-app" in the terminal (Ctrl + Shift + `), then run "ng serve" and navigate to the localhost link
+
+
 # MyAngularApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
