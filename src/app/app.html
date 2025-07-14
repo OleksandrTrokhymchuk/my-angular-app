@@ -1,0 +1,40 @@
+<div *ngIf="user" class="user-card">
+  <h3>{{ user.name.first }} {{ user.name.last }}</h3>
+  <p><strong>Gender:</strong> {{ user.gender }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Location:</strong> {{ user.location.country }}, {{ user.location.city }}, {{ user.location.street.name }}, {{ user.location.street.number }}</p>
+    
+  <img class="user-photo" [src]="user.picture.medium" alt="User profile picture" />
+
+  <button (click)="loadUserWithWeather()">Next user</button>
+</div>
+
+<div *ngIf="errorUserRequestMessage" class="error-message">
+  <p>{{ errorUserRequestMessage }}</p>
+  <button (click)="loadUserWithWeather()">Try again</button>
+</div>
+
+<div *ngIf="!user && !errorUserRequestMessage" class="loading-message">
+  <p>Loading user data...</p>
+</div>
+
+<div *ngIf="weatherData" class="weather-card">
+  <h4>The Weather</h4>
+  <p><strong>Current Temperature:</strong> {{ weatherData.current_weather.temperature }} {{weatherData.current_weather_units.temperature}}</p>
+  <p><strong>Daily Temperature Range:</strong></p>
+  <ul>
+    <li>Min: {{ minDailyTemperature }} {{weatherData.hourly_units.temperature_2m}}</li>
+    <li>Max: {{ maxDailyTemperature }} {{weatherData.hourly_units.temperature_2m}}</li>
+  </ul>
+  <p *ngIf="weatherDescription"><strong>Weather Condition:</strong> {{ weatherDescription }}</p>
+  <img *ngIf="weatherIconUrl" [src]="weatherIconUrl" alt="Weather icon"/>
+</div>
+
+<div *ngIf="errorWeatherRequestMessage" class="error-message">
+  <p>{{ errorWeatherRequestMessage }}</p>
+  <button (click)="loadUserWithWeather()">Try again</button>
+</div>
+
+<div *ngIf="!weatherData && !errorWeatherRequestMessage" class="loading-message">
+  <p>Loading weaher data...</p>
+</div>

@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.user-card,
+.weather-card,
+.error-message,
+.loading-message {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 450px;
+  width: 100%;
+}
+
+.user-card h3 {
+  color: #525292;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+.user-card p {
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.user-card p strong {
+  color: #6c757d;
+}
+.user-card .user-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 15px 0 50px 0;
+  border: 3px solid #525292;
+}
+
+button {
+  background-color: #525292;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #404071;
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0);
+}
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.weather-card h4 {
+  color: #525292;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.weather-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.error-message {
+  background-color: #fef9f9;
+  border-color: #dc3545;
+  color: #dc3545;
+  text-align: center;
+}
+.error-message p {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.error-message button {
+  background-color: #dc3545;
+}
+.error-message button:hover {
+  background-color: #bd2130;
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #6c757d;
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  .user-card, .weather-card, .error-message, .loading-message {
+    padding: 20px;
+  }
+  button {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
