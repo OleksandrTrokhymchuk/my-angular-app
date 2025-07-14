@@ -11,11 +11,11 @@
 
 <div *ngIf="errorUserRequestMessage" class="error-message">
   <p>{{ errorUserRequestMessage }}</p>
-  <button (click)="loadUserWithWeather()">Спробувати ще раз</button>
+  <button (click)="loadUserWithWeather()">Try again</button>
 </div>
 
 <div *ngIf="!user && !errorUserRequestMessage" class="loading-message">
-  <p>Завантаження даних про користувача...</p>
+  <p>Loading user data...</p>
 </div>
 
 <div *ngIf="weatherData" class="weather-card">
@@ -32,9 +32,9 @@
 
 <div *ngIf="errorWeatherRequestMessage" class="error-message">
   <p>{{ errorWeatherRequestMessage }}</p>
-  <button (click)="loadUserWithWeather()">Спробувати ще раз</button>
+  <button (click)="loadUserWithWeather()">Try again</button>
 </div>
 
 <div *ngIf="!weatherData && !errorWeatherRequestMessage" class="loading-message">
-  <p>Завантаження про погоду...</p>
+  <p>Loading weaher data...</p>
 </div>
